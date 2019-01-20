@@ -1,0 +1,95 @@
+{
+  "name": "graphql-yoga-signup-example",
+  "version": "1.0.0",
+  "description": "example project for my blog post - how to do signup with graphql-yoga and prisma",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,graphql -x babel-node src/index.js",
+    "dev": "nodemon -e js,graphql -x babel-node --inspect src/index.js",
+    "test": "jest",
+    "deploy": "prisma deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkEye123/graphql-yoga-signup-example.git"
+  },
+  "keywords": [
+    "graphql",
+    "graphql-yoga",
+    "prisma",
+    "javascript",
+    "example-project",
+    "signup"
+  ],
+  "author": "Matej Leško",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DarkEye123/graphql-yoga-signup-example/issues"
+  },
+  "homepage": "https://github.com/DarkEye123/graphql-yoga-signup-example#readme",
+  "dependencies": {
+    "@playlyfe/gql": "^2.6.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "bcryptjs": "2.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "graphql-cli": "^2.17.0",
+    "graphql-yoga": "^1.16.7",
+    "helmet": "^3.15.0",
+    "jest": "^23.6.0",
+    "jest-transform-graphql": "^2.1.0",
+    "jsonwebtoken": "8.4.0",
+    "nodemon": "^1.18.9",
+    "prisma": "^1.23.1",
+    "prisma-binding": "2.2.8",
+    "waait": "^1.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "transform": {
+      "\\.(gql|graphql)$": "jest-transform-graphql",
+      ".*": "babel-jest",
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
+  "eslintConfig": {
+    "rules": {
+      "max-len": [
+        "warn",
+        {
+          "code": 120
+        }
+      ]
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "env": {
+      "es6": true
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
