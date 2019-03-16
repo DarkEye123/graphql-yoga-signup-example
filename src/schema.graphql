@@ -7,11 +7,10 @@ type User {
 }
 
 type Mutation {
-  testMutation: String
   # '!' makes field mandatory, without it, mutation won't be even processed
   signUp(email: String!, password: String!, confirmPassword: String!): User!
 }
 
 type Query {
-  testQuery: String
+  currentUser: User
 }

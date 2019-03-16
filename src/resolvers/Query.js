@@ -1,3 +1,5 @@
-const Query = { testQuery: () => 'trol' };
+import currentUser from './queries/currentUser';
+
+const Query = { currentUser };
 
 export default Query;

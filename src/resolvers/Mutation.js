@@ -1,7 +1,6 @@
-import { signUp } from './mutations/user/signup';
+import signUp from './mutations/signup';
 
 const Mutation = {
-  testMutation: () => 'trololo',
   signUp,
 };
 
